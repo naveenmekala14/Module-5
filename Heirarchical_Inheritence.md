@@ -31,6 +31,102 @@ To write a Python program that uses **Hierarchical Inheritance** to input and di
 5. Display collected information using class methods.
 
 ## Program
-Add code here
+~~~
+# Python program for Hierarchical Inheritance
+
+# Base class
+class Details:
+
+    def getName(self, name):
+        self.name = name
+
+    def getAge(self, age):
+        self.age = age
+
+
+# Derived class 1
+class Employee(Details):
+
+    def getEmployeeDetails(self, employee_id, department):
+        self.employee_id = employee_id
+        self.department = department
+
+    def displayEmployee(self):
+        print("\nEmployee Details")
+        print("Name:", self.name)
+        print("Age:", self.age)
+        print("Employee ID:", self.employee_id)
+        print("Department:", self.department)
+
+
+# Derived class 2
+class Patient(Details):
+
+    def getPatientDetails(self, patient_id, disease):
+        self.patient_id = patient_id
+        self.disease = disease
+
+    def displayPatient(self):
+        print("\nPatient Details")
+        print("Name:", self.name)
+        print("Age:", self.age)
+        print("Patient ID:", self.patient_id)
+        print("Disease:", self.disease)
+
+
+# Employee object
+emp = Employee()
+
+ename = input("Enter Employee Name: ")
+eage = int(input("Enter Employee Age: "))
+eid = input("Enter Employee ID: ")
+dept = input("Enter Department: ")
+
+emp.getName(ename)
+emp.getAge(eage)
+emp.getEmployeeDetails(eid, dept)
+
+# Patient object
+pat = Patient()
+
+pname = input("\nEnter Patient Name: ")
+page = int(input("Enter Patient Age: "))
+pid = input("Enter Patient ID: ")
+disease = input("Enter Disease: ")
+
+pat.getName(pname)
+pat.getAge(page)
+pat.getPatientDetails(pid, disease)
+
+# Display details
+emp.displayEmployee()
+pat.displayPatient()
+~~~
 ## Sample Output
+~~~
+Enter Employee Name: Arun
+Enter Employee Age: 30
+Enter Employee ID: E101
+Enter Department: HR
+
+Enter Patient Name: Ravi
+Enter Patient Age: 25
+Enter Patient ID: P201
+Enter Disease: Fever
+
+Employee Details
+Name: Arun
+Age: 30
+Employee ID: E101
+Department: HR
+
+Patient Details
+Name: Ravi
+Age: 25
+Patient ID: P201
+Disease: Fever
+~~~
+# Result
+The program is verified.
+
 
